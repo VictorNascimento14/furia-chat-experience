@@ -9,12 +9,17 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#EB0029]/20 via-transparent to-transparent" />
       
       {/* FURIA Logo Background - More Prominent */}
-      <div className="absolute inset-0 opacity-10 z-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] animate-pulse">
+      <div className="absolute inset-0 opacity-20 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] animate-pulse">
+          {/* Updated with a more reliable logo source */}
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FURIA_allmode.png/800px-FURIA_allmode.png" 
+            src="https://i.imgur.com/8NuBFHt.png" 
             alt="FURIA Logo"
-            className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+            className="w-full h-full object-contain hover:grayscale-0 transition-all duration-500"
+            onError={(e) => {
+              e.currentTarget.src = "https://i.imgur.com/8NuBFHt.png"; // Fallback to another source
+              e.currentTarget.onerror = null; // Prevent infinite error loop
+            }}
           />
         </div>
       </div>
@@ -29,10 +34,15 @@ export const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-block animate-bounce mb-6">
+              {/* Updated the logo in the header too */}
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FURIA_allmode.png/800px-FURIA_allmode.png" 
+                src="https://i.imgur.com/8NuBFHt.png" 
                 alt="FURIA Logo"
                 className="w-24 h-24 md:w-32 md:h-32 object-contain mx-auto lg:mx-0 hover:scale-110 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = "https://i.imgur.com/8NuBFHt.png"; // Fallback
+                  e.currentTarget.onerror = null;
+                }}
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -66,4 +76,3 @@ export const HeroSection = () => {
     </div>
   );
 };
-
