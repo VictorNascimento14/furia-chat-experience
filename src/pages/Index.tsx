@@ -3,14 +3,14 @@ import { HeroSection } from "@/components/HeroSection";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-black">
-      {/* Animated Background Grid */}
+    <main className="min-h-screen bg-black [image-rendering:pixelated]">
+      {/* Pixelated Background Grid */}
       <div className="fixed inset-0 z-0 opacity-20">
-        <div className="absolute inset-0 grid grid-cols-8 gap-1">
-          {Array(64).fill(null).map((_, i) => (
+        <div className="absolute inset-0 grid grid-cols-16 gap-px">
+          {Array(256).fill(null).map((_, i) => (
             <div 
               key={i} 
-              className="bg-[#EB0029]/10 rounded-sm animate-pulse"
+              className="bg-[#EB0029]/10 border border-[#EB0029]/5"
               style={{ animationDelay: `${i * 0.1}s` }}
             />
           ))}

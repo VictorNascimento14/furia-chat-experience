@@ -99,3 +99,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .pixel-font {
+    font-family: 'Press Start 2P', system-ui, sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  .pixel-perfect {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
