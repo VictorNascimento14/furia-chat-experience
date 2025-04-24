@@ -1,18 +1,10 @@
-# Welcome to your Lovable project
+# Bem vindo ao projeto Furia Chat Experience
 
-## Project info
-
-**URL**: https://lovable.dev/projects/e850c6d0-4860-4bf6-b1db-08bce6dc5b2b
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/e850c6d0-4860-4bf6-b1db-08bce6dc5b2b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -59,15 +51,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e850c6d0-4860-4bf6-b1db-08bce6dc5b2b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

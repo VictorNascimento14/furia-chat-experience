@@ -6,8 +6,8 @@ import { MessageCircle } from "lucide-react";
 
 export const ChatInterface = () => {
   return (
-    <Card className="w-full max-w-md mx-auto bg-black/80 border border-white/10 backdrop-blur-sm">
-      <div className="flex flex-col h-[400px]">
+    <Card className="w-full max-w-md mx-auto bg-black/80 border-white/30 backdrop-blur-sm">
+      <div className="flex flex-col h-[450px]">
         <div className="p-4 border-b border-white/10">
           <div className="flex items-center gap-2">
             <div className="h-3 w-3 rounded-full bg-[#EB0029] animate-pulse" />

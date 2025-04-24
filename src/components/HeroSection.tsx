@@ -21,14 +21,14 @@ export const HeroSection = () => {
       </div>
       
       {/* FURIA Logo Background - More Pixelated */}
-      <div className="absolute inset-0 opacity-20 z-0 [image-rendering:pixelated]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
+      <div className="absolute inset-0 opacity-5 z-0">
+        <div className="absolute  bottom-10 left-1/2 -translate-x-1/2 ">
           <img 
-            src="https://i.imgur.com/8NuBFHt.png" 
-            alt="FURIA Logo"
-            className="w-full h-full object-contain transition-all duration-500 [image-rendering:pixelated]"
+            src="/public/pngegg.png" 
+            alt="background"
+            className="w-full h-full object-contain transition-all duration-500"
             onError={(e) => {
-              e.currentTarget.src = "https://i.imgur.com/8NuBFHt.png";
+              e.currentTarget.src = "#";
               e.currentTarget.onerror = null;
             }}
           />
@@ -46,11 +46,11 @@ export const HeroSection = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-block mb-6 pixel-perfect">
               <img 
-                src="https://i.imgur.com/8NuBFHt.png" 
+                src="/public/Furia_Esports_logo.png" 
                 alt="FURIA Logo"
                 className="w-24 h-24 md:w-32 md:h-32 object-contain mx-auto lg:mx-0 transition-transform duration-300 [image-rendering:pixelated]"
                 onError={(e) => {
-                  e.currentTarget.src = "https://i.imgur.com/8NuBFHt.png";
+                  e.currentTarget.src = "/public/Furia_Esports_logo.png";
                   e.currentTarget.onerror = null;
                 }}
               />
@@ -64,7 +64,7 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
-                className="bg-[#EB0029] hover:bg-[#EB0029]/80 text-white text-lg px-8 py-6 rounded-none border-2 border-white transition-all duration-300 [image-rendering:pixelated] pixel-font"
+                className="bg-[#EB0029] hover:bg-[#EB0029]/50 text-white text-lg px-8 py-6 rounded-none border-2 border-white transition-all duration-300 [image-rendering:pixelated] pixel-font"
               >
                 <Sword className="w-6 h-6" />
                 Começar Agora
@@ -72,7 +72,7 @@ export const HeroSection = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-[#EB0029] text-[#EB0029] hover:bg-[#EB0029]/10 text-lg px-8 py-6 rounded-none border-2 transition-all duration-300 [image-rendering:pixelated] pixel-font"
+                className="border-[#EB0029] text-[#EB0029] hover:bg-[gray]/50 text-lg px-8 py-6 rounded-none border-2 transition-all duration-300 pixel-font"
               >
                 <Trophy className="w-6 h-6" />
                 Saiba Mais
@@ -80,7 +80,7 @@ export const HeroSection = () => {
             </div>
           </div>
           
-          <div className="flex-1 w-full max-w-xl border-4 border-white/20 p-2 [image-rendering:pixelated]">
+          <div className="flex-1 w-full max-w-xl border-1 border-white/20 p-2 ">
             <ChatInterface />
           </div>
         </div>
