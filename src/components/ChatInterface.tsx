@@ -25,21 +25,25 @@ const furiaData = {
     'DreamHack Masters Spring 2020 - 2º lugar',
     'ESL One: Cologne 2020 - 3º-4º lugar'
   ],
+  club: 'FURIA Club é o lugar onde o verdadeiro fã mostra que é raiz! Aqui, você testa seus conhecimentos sobre a história, os jogadores, os momentos icônicos e tudo que envolve a FURIA Esports. Cada resposta certa vale pontos — quanto mais você sabe, mais alto sobe no ranking dos fãs. Desafie seus amigos, conquiste seu lugar no topo e prove que seu sangue é preto e branco!',
   historia: 'A FURIA Esports foi fundada em 2017 e rapidamente se tornou uma das principais organizações de esports do Brasil. O time de CS:GO é conhecido por seu estilo agressivo de jogo e por representar o Brasil em competições internacionais. A FURIA é conhecida por seu estilo de jogo único, chamado de "FURIA Style", que combina agressividade com estratégia inovadora.',
   estilo: 'O "FURIA Style" é caracterizado por jogadas agressivas, pressão constante e movimentações inesperadas. O time é conhecido por sua capacidade de adaptação e por surpreender os adversários com estratégias inovadoras.',
+
   treinador: {
     nome: 'guerri',
     nacionalidade: 'Brasil',
     idade: 32,
     tempoNaFuria: 'Desde 2018'
   },
+    
   sugestoesPerguntas: [
     'Quem são os jogadores da FURIA?',
     'Qual é o estilo de jogo da FURIA?',
     'Quais são as conquistas da FURIA?',
     'Quem é o treinador da FURIA?',
     'Qual é a história da FURIA?',
-    'Como está o desempenho dos jogadores?'
+    'Como está o desempenho dos jogadores?',
+    'O que é o Furia Club?'
   ]
 };
 
@@ -64,7 +68,7 @@ export const ChatInterface = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: 'Olá! Eu sou o Panthera a inteligência artificial da FURIA, como posso ajudar?\n\nPosso responder sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador\n\nO que você gostaria de saber?'
+      content: 'Olá! Eu sou o Panthera o Chatbot da FURIA, como posso ajudar?\n\nPosso responder sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador\n \n Quer saber mais sobre o Furia Club?\n O que você gostaria de saber? '
     }
   ]);
   const [input, setInput] = useState('');
@@ -109,13 +113,13 @@ export const ChatInterface = () => {
     // Verifica saudações
     if (lowerQuery.match(/^(oi|olá|ola|e aí|fala|hey|hi|hello|salve|bom dia|boa tarde|boa noite)/i)) {
       const saudação = saudações[Math.floor(Math.random() * saudações.length)];
-      return `${saudação} Como posso te ajudar hoje?\n\nPosso responder sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador`;
+      return `${saudação} Como posso te ajudar hoje?\n\nPosso responder sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador \n- Furia Club`;
     }
 
     // Verifica perguntas sobre o estado do bot
-    if (lowerQuery.match(/(como você está|tudo bem|como vai|como está|está bem)/i)) {
+    if (lowerQuery.match(/(como você está|tudo bem|como vai|como está|está bem | tudo bem)/i)) {
       const resposta = respostasPositivas[Math.floor(Math.random() * respostasPositivas.length)];
-      return `${resposta} O que você gostaria de saber sobre a FURIA?\n\nPosso falar sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador`;
+      return `${resposta} O que você gostaria de saber sobre a FURIA?\n\nPosso falar sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador \n- Furia Club`;
     }
     
     // Verifica perguntas sobre jogadores
@@ -133,7 +137,12 @@ export const ChatInterface = () => {
         lowerQuery.includes('vitória') || lowerQuery.includes('vitórias')) {
       return `Principais conquistas da FURIA:\n${furiaData.conquistas.join('\n')}`;
     }
-    
+    // Verifica perguntas sobre Furia Club
+    if (lowerQuery.includes('furia club') || lowerQuery.includes('o que é o furia club') ||
+        lowerQuery.includes('club') || lowerQuery.includes('como funciona o furia club') ||
+        lowerQuery.includes('clube') || lowerQuery.includes('CLUB')) {
+          return furiaData.club;
+    }
     // Verifica perguntas sobre história
     if (lowerQuery.includes('história') || lowerQuery.includes('history') ||
         lowerQuery.includes('fundação') || lowerQuery.includes('quando foi criada') ||
@@ -155,10 +164,10 @@ export const ChatInterface = () => {
 
     // Verifica agradecimentos
     if (lowerQuery.match(/(obrigado|obrigada|valeu|vlw|thanks|thank you)/i)) {
-      return 'Por nada, tamo junto! Estou aqui para ajudar. Tem mais alguma dúvida sobre a FURIA?\n\nPosso falar sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador';
+      return 'Por nada, tamo junto ! Estou aqui para ajudar. Tem mais alguma dúvida sobre a FURIA?\n\nPosso falar sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador \n- Furia Club';
     }
     
-    return 'Desculpe, não entendi sua pergunta. Você pode perguntar sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo\n- Treinador\n\nOu pode tentar uma dessas perguntas:\n' + furiaData.sugestoesPerguntas.map(p => `- ${p}`).join('\n');
+    return 'Desculpe, não entendi sua pergunta. Você pode perguntar sobre:\n- Jogadores e suas estatísticas\n- Conquistas do time\n- História da FURIA\n- Estilo de jogo \n- Furia Club \n- Treinador\n\nOu pode tentar uma dessas perguntas:\n' + furiaData.sugestoesPerguntas.map(p => `- ${p}`).join('\n');
   };
 
   return (
