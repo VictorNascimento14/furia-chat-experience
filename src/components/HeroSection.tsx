@@ -31,11 +31,11 @@ export const HeroSection = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-block mb-6 pixel-perfect">
               <img 
-                src="/public/Furia_Esports_logo.png" 
+                src="/Furia_Esports_logo.png" 
                 alt="FURIA Logo"
                 className="w-24 h-24 md:w-60 md:h-32 object-contain mx-auto lg:mx-0 transition-transform duration-300 "
                 onError={(e) => {
-                  e.currentTarget.src = "/public/Furia_Esports_logo.png";
+                  e.currentTarget.src = "/Furia_Esports_logo.png";
                   e.currentTarget.onerror = null;
                 }}
               />
