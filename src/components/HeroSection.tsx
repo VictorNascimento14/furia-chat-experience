@@ -52,7 +52,7 @@ export const HeroSection = () => {
                 className="bg-[#EB0029] hover:bg-[#EB0029]/50 text-white text-lg px-8 py-6 rounded-none border-2 border-white transition-all duration-300 [image-rendering:pixelated] pixel-font"
               >
                 <Sword className="w-6 h-6" />
-                <a href="https://www.instagram.com/furiagg/" target="_blank">Siga FURIA</a>
+                <a href="https://furiaclub.netlify.app/" target="_blank">Furia Club</a>
               </Button>
               <Button 
                 size="lg"
