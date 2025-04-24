@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { ChatInterface } from "./ChatInterface";
 import { Sword, Trophy } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#1A1F2C] [image-rendering:pixelated]">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-[#0c0909] via-[#1a1f2ce3] to-[#000000] [image-rendering:pixelated]">
       {/* Pixelated Background Grid */}
       <div className="absolute inset-0 grid grid-cols-16 grid-rows-16 gap-px opacity-20">
         {Array(256).fill(null).map((_, i) => (
@@ -20,25 +19,11 @@ export const HeroSection = () => {
         ))}
       </div>
       
-      {/* FURIA Logo Background - More Pixelated */}
-      <div className="absolute inset-0 opacity-5 z-0">
-        <div className="absolute  bottom-10 left-1/2 -translate-x-1/2 ">
-          <img 
-            src="/public/pngegg.png" 
-            alt="background"
-            className="w-full h-full object-contain transition-all duration-500"
-            onError={(e) => {
-              e.currentTarget.src = "#";
-              e.currentTarget.onerror = null;
-            }}
-          />
-        </div>
-      </div>
 
       {/* Retro Game Particles */}
       <div className="absolute inset-0 z-1">
-        <div className="absolute top-20 left-20 w-8 h-8 bg-[#EB0029] rounded-none animate-bounce [image-rendering:pixelated]" />
-        <div className="absolute bottom-20 right-20 w-8 h-8 bg-[#EB0029] rounded-none animate-pulse [image-rendering:pixelated]" />
+        <div className="absolute top-20 left-20 w-5 h-5 bg-[#EB0029] rounded-none animate-bounce [image-rendering:pixelated]" />
+        <div className="absolute bottom-20 right-20 w-5 h-5 bg-[#ff0000] rounded-none animate-bounce [image-rendering:pixelated]" />
       </div>
       
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -48,7 +33,7 @@ export const HeroSection = () => {
               <img 
                 src="/public/Furia_Esports_logo.png" 
                 alt="FURIA Logo"
-                className="w-24 h-24 md:w-32 md:h-32 object-contain mx-auto lg:mx-0 transition-transform duration-300 [image-rendering:pixelated]"
+                className="w-24 h-24 md:w-60 md:h-32 object-contain mx-auto lg:mx-0 transition-transform duration-300 "
                 onError={(e) => {
                   e.currentTarget.src = "/public/Furia_Esports_logo.png";
                   e.currentTarget.onerror = null;
@@ -67,7 +52,7 @@ export const HeroSection = () => {
                 className="bg-[#EB0029] hover:bg-[#EB0029]/50 text-white text-lg px-8 py-6 rounded-none border-2 border-white transition-all duration-300 [image-rendering:pixelated] pixel-font"
               >
                 <Sword className="w-6 h-6" />
-                Começar Agora
+                <a href="https://www.instagram.com/furiagg/" target="_blank">Siga FURIA</a>
               </Button>
               <Button 
                 size="lg"
@@ -75,7 +60,7 @@ export const HeroSection = () => {
                 className="border-[#EB0029] text-[#EB0029] hover:bg-[gray]/50 text-lg px-8 py-6 rounded-none border-2 transition-all duration-300 pixel-font"
               >
                 <Trophy className="w-6 h-6" />
-                Saiba Mais
+                <a href="https://www.furia.gg/" target="_blank">Loja FURIA</a>
               </Button>
             </div>
           </div>

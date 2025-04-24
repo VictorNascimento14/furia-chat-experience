@@ -1,9 +1,8 @@
-
 import { HeroSection } from "@/components/HeroSection";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-black [image-rendering:pixelated]">
+    <main className="min-h-screen bg-black">
       {/* Pixelated Background Grid */}
       <div className="fixed inset-0 z-0 opacity-20">
         <div className="absolute inset-0 grid grid-cols-16 gap-px">
@@ -17,7 +16,7 @@ const Index = () => {
         </div>
       </div>
       
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-screen flex flex-col">
         <HeroSection />
       </div>
     </main>

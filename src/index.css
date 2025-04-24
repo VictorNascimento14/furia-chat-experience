@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -97,7 +98,6 @@
 
   body {
     @apply bg-background text-foreground;
-    
   }
 }
 
@@ -107,10 +107,6 @@
     letter-spacing: 0.1em;
   }
 
-  .pixel-perfect {
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
