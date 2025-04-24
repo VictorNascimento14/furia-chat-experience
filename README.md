@@ -1,4 +1,4 @@
-# 🎮 FURIA Talk Squad
+# 🎮 FURIA Chat Experience
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
@@ -8,7 +8,7 @@
 </div>
 
 ## 📋 Visão Geral
-O FURIA Talk Squad é uma aplicação web moderna que oferece uma experiência de chat interativa com informações sobre a equipe de esports FURIA. Desenvolvido com tecnologias de ponta, o projeto combina design moderno com elementos retro-gaming, criando uma experiência única para os fãs.
+O FURIA Chat Experience é uma aplicação web moderna que oferece uma experiência de chat interativa com informações sobre a equipe de esports FURIA. Desenvolvido com tecnologias de ponta, o projeto combina design moderno com elementos retro-gaming, criando uma experiência única para os fãs.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -25,10 +25,8 @@ O FURIA Talk Squad é uma aplicação web moderna que oferece uma experiência d
   bg-gradient-to-b from-[#0c0909] via-[#1a1f2ce3] to-[#000000]
   ```
 - **Efeitos Visuais**:
-  - Pixel art rendering
   - Animações suaves
   - Grid interativo
-  - Partículas retro-gaming
 
 ## 🎨 Design System
 
@@ -38,14 +36,12 @@ O FURIA Talk Squad é uma aplicação web moderna que oferece uma experiência d
 - **Azul Escuro**: `#1A1F2C`
 
 ### Tipografia
-- **Press Start 2P**: Fonte pixelada para elementos retro
 - **Sistema**: Fontes modernas para conteúdo
 
 ### Componentes
 - **Chat Interface**: Interface de chat responsiva
 - **Hero Section**: Seção principal com gradiente dinâmico
 - **Botões Interativos**: Com efeitos hover e animações
-- **Grid Pixelado**: Background interativo com animações
 
 ## 💻 Como Acessar
 
@@ -78,8 +74,6 @@ npm run dev
 - Scrollbar personalizada
 
 ### Efeitos Visuais
-- Grid pixelado animado
-- Partículas retro-gaming
 - Gradientes dinâmicos
 - Animações suaves
 
@@ -98,7 +92,6 @@ npm run dev
 
 ### 2. Acessibilidade
 - Componentes Radix UI
-- Navegação por teclado
 - Contraste adequado
 - ARIA labels
 
@@ -189,13 +182,13 @@ Para ver o projeto em ação:
 ## 📞 Suporte
 
 Para dúvidas técnicas ou suporte:
-- Email: [SEU_EMAIL]
-- GitHub: [SEU_GITHUB]
-- LinkedIn: [SEU_LINKEDIN]
+- Email: victor.dev.nascimento@gmail.com
+- GitHub: https://github.com/VictorNascimento14
+- LinkedIn: https://www.linkedin.com/in/-dev-victor-nascimento/
 
 ---
 
 <div align="center">
-  <p>Desenvolvido com ❤️ por [SEU_NOME] para a FURIA Esports</p>
+  <p>Desenvolvido com ❤️ por Victor para a FURIA Esports</p>
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
 </div>
