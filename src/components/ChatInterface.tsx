@@ -199,7 +199,7 @@ export const ChatInterface = () => {
                 <Button
                   key={index}
                   variant="outline"
-                  className="text-xs bg-[#EB0029]/10 hover:bg-[#EB0029]/20 text-white border-[#EB0029]/20"
+                  className="text-xs bg-[#EB0029]/10 hover:bg-white/80 text-white border-[#EB0029]/20"
                   onClick={() => {
                     setInput(pergunta);
                     handleSend();
